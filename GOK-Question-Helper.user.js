@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Grumpy Old King's Avatar Helper
 // @namespace    https://github.com/aintdiego/GOK-Question-Helper
-// @version      0.2.1
+// @version      1.0
 // @description  Fills the question fields with the values needed for the "Blumaroo Court Jester" avatar
 // @author       aintdiego
 // @match        http://www.neopets.com/medieval/grumpyking.phtml
