@@ -9,29 +9,17 @@
 // @grant        none
 // ==/UserScript==
 
-$('<button id="fillQuestion">Fill Question</button><button id="generatePunchline">Generate Random Punchline</button><br />').insertBefore($('input[value=\'Tell the King your joke!\']'));
+$('<button id="fillQuestion">Fill Question</button> <button id="generatePunchline">Generate Random Punchline</button><br />').insertBefore($('input[value=\'Tell the King your joke!\']'));
 
 $('#fillQuestion').click(function(event){
     // This prevents the page from submitting your empty joke when you click the new button
     event.preventDefault();
     
     // Let's fill the fields
-    $('#qp1').val('What');
-    $('#qp2').val('do');
-    $('#qp3').val('you do if');
-    $('#qp4 option').filter(function() {
-        return $(this).text() == "*Leave blank*"; 
-    }).prop('selected', true);
-    $('#qp5').val('fierce');
-    $('#qp6').val('Peophins');
-    $('#qp7 option').filter(function() {
-        return $(this).text() == "*Leave blank*"; 
-    }).prop('selected', true);
-    $('#qp8').val('has eaten too much');
-    $('#qp9 option').filter(function() {
-        return $(this).text() == "*Leave blank*"; 
-    }).prop('selected', true);
-    $('#qp10').val('tin of olives');
+    selections = new Array('What', 'do', 'you do if', '', 'fierce', 'Peophins', '', 'has eaten too much', '', 'tin of olives');
+    $("[name^='qp']").each(function(k,v) {
+        $(v).val(selections[k]);
+    });
 });
 
 $('#generatePunchline').click(function(event){
