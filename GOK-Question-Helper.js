@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Grumpy Old King's Avatar Helper
 // @namespace    https://github.com/aintdiego/GOK-Question-Helper
-// @version      0.2
+// @version      0.2.1
 // @description  Fills the question fields with the values needed for the "Blumaroo Court Jester" avatar
 // @author       aintdiego
 // @match        http://www.neopets.com/medieval/grumpyking.phtml
@@ -9,7 +9,7 @@
 // @grant        none
 // ==/UserScript==
 
-$('<button id="fillQuestion">Fill Question</button><button id="generatePunchline">Generate random punchline</button><br />').insertBefore($('input[value=\'Tell the King your joke!\']'));
+$('<button id="fillQuestion">Fill Question</button><button id="generatePunchline">Generate Random Punchline</button><br />').insertBefore($('input[value=\'Tell the King your joke!\']'));
 
 $('#fillQuestion').click(function(event){
     // This prevents the page from submitting your empty joke when you click the new button
