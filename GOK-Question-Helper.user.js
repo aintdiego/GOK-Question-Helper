@@ -27,7 +27,7 @@ $('#generatePunchline').click(function(event){
 	
     for (i = 1; i <= 8; i++) { 
         var $options = $('#ap' + i).find('option');
-        random = ~~(Math.random() * $options.length) + 1; // "+1" -> quick fix so it doesn't select the first option (Select Part *)
+        random = ~~(Math.random() * $options.length + 1); // "+1" -> quick fix so it doesn't select the first option (Select Part *)
 
         $options.eq(random).prop('selected', true);
     }
