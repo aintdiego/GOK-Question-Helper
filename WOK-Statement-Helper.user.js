@@ -17,7 +17,7 @@ $('#generateStatement').click(function(event){
     for (i = 1; i <= 7; i++) {
         var $options = $('#qp' + i).find('option');
         random = ~~(Math.random() * $options.length);
-        if(random === 1){
+        if(random === 0){
             random++;
         }
 
