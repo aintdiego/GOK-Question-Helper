@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Grumpy Old King's Avatar Helper
 // @namespace    https://github.com/aintdiego/GOK-Question-Helper
-// @version      1.0.1
+// @version      1.0.2
 // @description  Fills the question fields with the values needed for the "Blumaroo Court Jester" avatar
 // @author       aintdiego
 // @match        http://www.neopets.com/medieval/grumpyking.phtml
@@ -27,7 +27,11 @@ $('#generatePunchline').click(function(event){
 	
     for (i = 1; i <= 8; i++) { 
         var $options = $('#ap' + i).find('option');
-        random = ~~(Math.random() * $options.length + 1); // "+1" -> quick fix so it doesn't select the first option (Select Part *)
+        random = ~~(Math.random() * $options.length);
+        
+        if(random === 0){
+            random++;
+        }
 
         $options.eq(random).prop('selected', true);
     }
